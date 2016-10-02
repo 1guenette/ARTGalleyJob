@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Art Log</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<meta name="description" content="Just another Open Designs template." />
+<meta name="robots" content="noodp,noydir" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" id="child-theme-css" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="responsive-main-css-css" href="css/responsive-main.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="responsive-css-css" href="css/responsive.css" type="text/css" media="all" />
+<link rel="stylesheet" id="tb_styles-css" href="css/tb-styles.min.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/jquery.js">
+	function display()
+	{
+	var photo = document.getElementByID("picFile").files[0];
+	documnet.getElementByID("pic").setAttribut("src", photo) ;
+	//documnet.getElementByID("pic").src = photo; 
+	}
+
+	function delButton()
+	{
+		var val = document.getElementByID("log").value;
+		if(val != "New Painting")
+		{
+			document.getElementByID("buttonSpace").innerHTML = "<br>" + "<button>DELETE</button>";
+			document.getElementByID("buttonSpace").innerHTML = "Save";
+		}
+		else
+		{
+			document.getElementByID("buttonSpace").innerHTML = "";
+			document.getElementByID("updateButton").innerHTML = "Submit";
+		}
+
+	}
+</script>
+
+
+</head>
+
+<body class="home blog header-full-width full-width-content">
+  <div id="header">
+  <div class="site-header">
+    <h1 class="site-header-logo-container" style = "width: 200px"> <b>AMY GARCIA</b></h1>
+      
+            <ul id="page-nav" class="horizontal-list" style = "padding-left: 200px;">
+<li class="page-nav-top-posts"><a href="http://www.amygarcia.com/" id="feature-scroll" class="page-anchor-link">Home</a></li>
+
+<li class="page-nav-popular-posts"><a href="http://www.amygarcia.com/about/" id="popular-scroll" class="page-anchor-link">About</a></li>
+
+<li class="page-nav-popular-posts active"><a href="" id="popular-scroll" class="page-anchor-link">Paintings</a></li>
+
+<li class="page-nav-popular-posts"><a href="http://www.amygarcia.com/contact/" id="popular-scroll" class="page-anchor-link">Contact</a></li>
+
+</ul>
+
+
+
+
+    </div>
+  </div>
+  <div id="wrap">
+<div id="inner">
+<div class="wrap">
+<div id="content-sidebar-wrap">
+
+	<br>
+	<br>
+	<br>
+	<div class="container">
+	
+		<div class="form-group">
+  <label for="sel1">New or Existing Painting:</label>
+  <select class="form-control" id="log" onchange="delButton()" style="width:80%">
+    <option selected>New Painting</option>
+    <option>Andy Warhol</option>
+  </select>
+  <div id = "buttonSpace">
+  <!-- <br><button>DELETE</button>-->
+  </div>
+</div>
+		
+
+	<hr>
+  <h2>Art Info</h2>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Name:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="name" placeholder="Enter painting name">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="size">Size:</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control" id="width" placeholder="Width">
+      </div>
+
+
+      <div class="col-sm-2">
+        <input type="number" class="form-control" id="height" placeholder="Height">
+      </div>
+    </div>
+
+    <div class="form-group">
+  		<label class="control-label col-sm-2" for="comment">Description:</label>
+   		<div class="col-sm-9">
+  		<textarea class="form-control" rows="5" id="Description"></textarea>
+		</div>
+	</div>
+
+	<div class="form-group">
+  		<label class="control-label col-sm-2" for="comment">Photo:</label>
+   		<div class="col-sm-4">
+   		 <input type="file" id ="picFile" accept="image/*" onchange = "display()">  		
+		</div>
+		<div class="col-sm-4">
+   		 <img id = "pic">  		
+		</div>
+	</div>
+
+	<div class="form-group">
+      <label class="control-label col-sm-2" >Price:</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control" id="price" placeholder="Enter price">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" ></label>
+      <div class="col-sm-2">
+        <div class="checkbox">
+  <label>
+  <input type="checkbox" value="">Sold</label>
+</div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" id = "updateButton">Save</button>
+      </div>
+    </div>
+
+
+
+
+
+  
+
+
+
+  </form>
+</div>
+
+
+
+
+</div><!-- end #content -->
+</div><!-- end .wrap --></div><!-- end #inner --> 
+
+<div id="bigg-footer">
+<div class="wrap">
+        <div class="twocol">
+            <div id="text-2" class="widget widget_text"><div class="widget-wrap"><h4 class="widgettitle">Company</h4>			
+			<div class="textwidget"><ul class="plain-list">
+<li><a href="http://www.amygarcia.com/">Home</a></li>
+<li><a href="http://www.amygarcia.com/about/">About</a></li>
+<li><a href="">Paintings</a></li>
+<li><a href="http://www.amygarcia.com/contact/">Contact</a></li>
+</ul>
+</div>
+		</div></div>
+        </div>
+        
+		        
+        </div>
+</div>
+ 
+</div><!-- end #wrap -->
+
+
+</div>
+</body>
+</html>
